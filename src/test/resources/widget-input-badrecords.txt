@@ -1,0 +1,15 @@
+977|0|bad number|flex-lpmodelherofeature|aboutspecials|gmps-johnl-sullivan|""|2wd light duty chassis-cab trucks&2wd standard pickup trucks&4-door mid-size passenger car&buick&chevrolet&corvette&gmc&gmlslp-buick&gmlslp-chevrolet&gmps-johnl-sullivan&gmps-performance-ca&gmps-reliable-pontiac&gmps-walser-roseville&gm-t1-chevrolet&gm-t1-gmc|desktop|2457188|1|0|0|958|25238|12367
+4653|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-kendall-fl|""|2wd sport utility vehicles&4-door large passenger car&4wd sport utility vehicles&buick&cadillac&chevrolet&gmlslp-chevrolet&gmps-diver&gmps-kendall-fl&gmps-lehman&gmps-tropical&gmps-wdadechev&gm-t1-cadillac&gm-t1-chevrolet&new|desktop|2457188|1|0|0|0|18871|0
+5074|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-sutliff|""|2wd sport utility vehicles&4-door mid-size passenger car&4wd sport utility vehicles&buick&chevrolet&encore&flex&ford&gmlslp-buick&gmps-faulkner&gmps-freysinger&gmps-jones-family&gmps-sutliff&gm-t1-buick&gm-t1-chevrolet|desktop|2457188|1|0|0|0|937|0
+599|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-stingray|""|summary|desktop|2457188|1|0|0|0|11063|0
+4598|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-jeff-gordon|""|summary|desktop|2457188|1|0|0|0|18571|0
+4462|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-gateway|""|summary|desktop|2457188|2|0|0|0|447|0
+38|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-bergeyschev|""|summary|desktop|2457188|2|0|0|0|34629|0
+257|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-gateway|""|summary|desktop|2457188|2|0|0|0|447|0
+154|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-dan-cummins|""|2wd standard pickup trucks&4-door compact passenger car&4wd standard pickup trucks&cadillac&chevrolet&cruze&gmc&gmlslp-chevrolet&gmps-dan-cummins&gmps-mwilson&gmps-quantrell&gm-t1-buick&gm-t1-cadillac&gm-t1-chevrolet&gm-t1-gmc|desktop|2457188|1|0|0|0|60474|0
+811|0|1393476903000|flex-lpmodelherofeature|aboutspecials|gmps-criswell|""|2-door compact passenger car&2wd standard pickup trucks&4wd standard pickup trucks&cadillac&camaro&chevrolet&gmc&gmps-burns-rockhill&gmps-campbell&gmps-keller-ny&gm-t1-chevrolet&gm-t1-gmc&impala&new&silverado 1500|desktop|2457188|2|0|0|0|16412|0
+1083|0|1393476903000|flex-lpmodelherofeature|aboutspecials|gmps-northstar|""|summary|desktop|2457188|1|0|0|0|97|0
+155|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-dan-cummins|""|summary|desktop|2457188|1|0|0|0|60474|0
+256|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-gateway|""|2wd standard pickup trucks&4wd sport utility vehicles&4wd standard pickup trucks&buick&cadillac&chevrolet&new&silverado 1500 crew cab&srx|desktop|2457188|1|0|0|0|179|0
+4267|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-courtesy-az|""|""|desktop|2457188|5|0|0|0|1189184|45433
+5053|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-stingray|""|2wd standard pickup trucks&4wd standard pickup trucks&chevrolet&gmps-stingray&new&silverado 1500|desktop|2457188|1|0|0|0|11063|0
