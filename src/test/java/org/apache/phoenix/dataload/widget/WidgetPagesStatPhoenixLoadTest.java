@@ -47,8 +47,7 @@ public class WidgetPagesStatPhoenixLoadTest {
         public void run() {
             try {
                 DriverManager.registerDriver(PhoenixDriver.INSTANCE);
-                Connection connection = DriverManager.getConnection("jdbc:phoenix:tukpdmdlake03.tuk.cobaltgroup.com,tukpdmdlake04.tuk.cobaltgroup.com,tukpdmdlake05.tuk.cobaltgroup.com:2181:/hbase-unsecure");
-                //Connection connection = DriverManager.getConnection("jdbc:phoenix:master01.preprod.datalake.cdk.com,master02.preprod.datalake.cdk.com,master03.preprod.datalake.cdk.com:2181:/hbase-unsecure");
+                Connection connection = DriverManager.getConnection("jdbc:phoenix:master01.preprod.datalake.cdk.com:2181:/hbase-unsecure"); //
                 int iteration = 1;
                 while (iteration <= TOTAL_ITERATIONS_PER_USER) {
                     String webid = retrieveWebId();
@@ -128,25 +127,6 @@ public class WidgetPagesStatPhoenixLoadTest {
         }
 
         String[] webIds = {
-                "motp-sewell-portal", "gmps-laura", "gmps-dan-cummins", "gmps-classic", "gmps-karl-chev",
-                "gmps-courtesy-az", "gmps-kendall-fl", "gmps-sundance-chev", "gmps-stingray", "gmps-henna-austin",
-                "gmps-thorobred", "gmps-sapaugh", "gmps-reliable-tx", "gmps-jimbutler", "gmps-jack", "gmps-good-renton",
-                "gmps-city-nc", "gmps-mac-mulkin", "gmps-bachman", "gmps-christopher-chevy", "gmps-covert-chev",
-                "gmps-buff-whelan", "gmps-dominion-sp", "motp-donmoore-portal", "gmps-best-chevrolet", "gmps-covert-city",
-                "gmps-rickhendrick-chev-nc", "gmps-sugarland", "gmps-kerbeck-subaru", "gmps-moritz-chevrolet",
-                "gmps-bradshawauto", "gmps-hewlett", "gmps-sinclair-mo", "gmps-mayse-earnhardt", "gmps-terrylabonte",
-                "gmps-findlay", "gmps-serpentini-strongsville", "gmps-loehmann", "gmps-johnl-sullivan",
-                "gmps-johnnylondoff", "gmps-jeff-gordon", "gmps-bob-johnson", "gmps-jim-glover", "gmps-jba-chev",
-                "gmps-miller-mn", "gmps-capitol-chevrolet", "gmps-suburban-mn", "gmps-everett-ar", "gmps-george-matick",
-                "motp-phil-portal", "gmps-shaheen", "gmps-moran-chevy", "gmps-win", "gmps-rydell-auto-ca",
-                "gmps-richard-ct", "gmps-gateway-tx", "gmps-dimmitt-chevy", "gmps-denny", "gmps-sunset-chev",
-                "gmps-weber-chevrolet", "gmps-bobbrown-chev", "gmps-jerry-chevy", "gmps-service-la", "gmps-everett",
-                "gmps-northstar-ny", "gmps-criswell", "gmps-pete-moore", "gmps-peoria", "gmps-tom-benson",
-                "gmps-voss", "gmps-huffines-chev", "gmps-elco-chevy", "gmps-diver", "gmps-northstar",
-                "gmps-rosedale", "motp-kia-east", "gmps-sutliff", "gmps-ferman", "gmps-rapid", "gmps-woody-folsom",
-                "gmps-king-longmont", "gmps-ostrom", "gmps-young", "gmps-bergeyschev", "gmps-orielly", "gmps-green-il",
-                "gmps-c-o-wv", "gmps-hubler", "gmps-paddock", "gmps-love", "gmps-chevyland", "gmps-rogers-usry",
-                "gmps-hurd-cars", "gmps-country-chevrolet", "gmps-vandevere-chev", "gmps-hh-chev", "gmps-sands-chev",
                 "gmps-gateway", "motp-imperial-cdj", "gmps-freeman"
         };
     }

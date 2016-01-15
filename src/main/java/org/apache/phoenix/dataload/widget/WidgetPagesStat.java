@@ -19,7 +19,6 @@ public final class WidgetPagesStat {
     private String deviceType;
     private long viewCount;
     private long viewDateTimestamp;
-    private String viewDate;
     private String userSegments;
     private long dimDateKey;
     private long rowNumber;
@@ -136,14 +135,6 @@ public final class WidgetPagesStat {
         this.viewDateTimestamp = viewDateTimestamp;
     }
 
-    public String getViewDate() {
-        return viewDate;
-    }
-
-    public void setViewDate(String viewDate) {
-        this.viewDate = viewDate;
-    }
-
     public String getUserSegments() {
         return userSegments;
     }
@@ -188,7 +179,6 @@ public final class WidgetPagesStat {
         if (widgetVersion != that.widgetVersion) return false;
         if (deviceType != null ? !deviceType.equals(that.deviceType) : that.deviceType != null) return false;
         if (userSegments != null ? !userSegments.equals(that.userSegments) : that.userSegments != null) return false;
-        if (viewDate != null ? !viewDate.equals(that.viewDate) : that.viewDate != null) return false;
         if (webId != null ? !webId.equals(that.webId) : that.webId != null) return false;
         if (webPageLabel != null ? !webPageLabel.equals(that.webPageLabel) : that.webPageLabel != null) return false;
         if (widgetContext != null ? !widgetContext.equals(that.widgetContext) : that.widgetContext != null)
@@ -214,7 +204,6 @@ public final class WidgetPagesStat {
         result = 31 * result + (deviceType != null ? deviceType.hashCode() : 0);
         result = 31 * result + (int) (viewCount ^ (viewCount >>> 32));
         result = 31 * result + (int) (viewDateTimestamp ^ (viewDateTimestamp >>> 32));
-        result = 31 * result + (viewDate != null ? viewDate.hashCode() : 0);
         result = 31 * result + (userSegments != null ? userSegments.hashCode() : 0);
         result = 31 * result + (int) (dimDateKey ^ (dimDateKey >>> 32));
         result = 31 * result + (int) (rowNumber ^ (rowNumber >>> 32));
@@ -238,7 +227,6 @@ public final class WidgetPagesStat {
                 ", deviceType='" + deviceType + '\'' +
                 ", viewCount=" + viewCount +
                 ", viewDateTimestamp=" + viewDateTimestamp +
-                ", viewDate='" + viewDate + '\'' +
                 ", userSegments='" + userSegments + '\'' +
                 ", dimDateKey=" + dimDateKey +
                 ", rowNumber=" + rowNumber +

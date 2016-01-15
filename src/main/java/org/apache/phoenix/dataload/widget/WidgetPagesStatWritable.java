@@ -36,7 +36,6 @@ public class WidgetPagesStatWritable implements DBWritable, Writable {
 
         widgetPagesStat.setViewCount(input.readLong());
         widgetPagesStat.setViewDateTimestamp(input.readLong());
-        widgetPagesStat.setViewDate(input.readLine());
         widgetPagesStat.setUserSegments(input.readLine());
 
         widgetPagesStat.setDimDateKey(input.readLong());
@@ -62,7 +61,6 @@ public class WidgetPagesStatWritable implements DBWritable, Writable {
 
         output.writeLong(widgetPagesStat.getViewCount());
         output.writeLong(widgetPagesStat.getViewDateTimestamp());
-        output.writeBytes(widgetPagesStat.getViewDate());
         output.writeBytes(widgetPagesStat.getUserSegments());
 
         output.writeLong(widgetPagesStat.getDimDateKey());
@@ -85,7 +83,6 @@ public class WidgetPagesStatWritable implements DBWritable, Writable {
         widgetPagesStat.setDeviceType(rs.getString("DEVICE_TYPE"));
         widgetPagesStat.setViewCount(rs.getLong("VIEW_COUNT"));
         widgetPagesStat.setViewDateTimestamp(rs.getLong("VIEW_DATE_TIMESTAMP"));
-        widgetPagesStat.setViewDate(rs.getString("VIEW_DATE"));
         widgetPagesStat.setUserSegments(rs.getString("USER_SEGMENT"));
 
         widgetPagesStat.setDimDateKey(rs.getLong("DIM_DATE_KEY"));
@@ -111,11 +108,14 @@ public class WidgetPagesStatWritable implements DBWritable, Writable {
 
         pstmt.setString(14, widgetPagesStat.getUserSegments());
         pstmt.setLong(15, widgetPagesStat.getDimDateKey());
-        pstmt.setString(16, widgetPagesStat.getViewDate());
-        pstmt.setLong(17, widgetPagesStat.getViewDateTimestamp());
+        pstmt.setLong(16, widgetPagesStat.getViewDateTimestamp());
 
-        pstmt.setLong(18, widgetPagesStat.getRowNumber());
+        pstmt.setLong(17, widgetPagesStat.getRowNumber());
     }
+//            "WEB_ID,WEB_PAGE_LABEL,DEVICE_TYPE," +
+//            "WIDGET_INSTANCE_ID,WIDGET_TYPE,WIDGET_VERSION,WIDGET_CONTEXT," +
+//            "TOTAL_CLICKS,TOTAL_CLICK_VIEWS,TOTAL_HOVER_TIME_MS,TOTAL_TIME_ON_PAGE_MS,TOTAL_VIEWABLE_TIME_MS,VIEW_COUNT," +
+//            "USER_SEGMENT,DIM_DATE_KEY,VIEW_DATE_TIMESTAMP,ROW_NUMBER"
 
     public WidgetPagesStat getWidgetPagesStat() {
         return widgetPagesStat;

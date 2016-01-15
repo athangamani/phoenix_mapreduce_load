@@ -1,15 +1,10 @@
-977|0|bad number|flex-lpmodelherofeature|aboutspecials|gmps-johnl-sullivan|""|2wd light duty chassis-cab trucks&2wd standard pickup trucks&4-door mid-size passenger car&buick&chevrolet&corvette&gmc&gmlslp-buick&gmlslp-chevrolet&gmps-johnl-sullivan&gmps-performance-ca&gmps-reliable-pontiac&gmps-walser-roseville&gm-t1-chevrolet&gm-t1-gmc|desktop|2457188|1|0|0|958|25238|12367
-4653|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-kendall-fl|""|2wd sport utility vehicles&4-door large passenger car&4wd sport utility vehicles&buick&cadillac&chevrolet&gmlslp-chevrolet&gmps-diver&gmps-kendall-fl&gmps-lehman&gmps-tropical&gmps-wdadechev&gm-t1-cadillac&gm-t1-chevrolet&new|desktop|2457188|1|0|0|0|18871|0
-5074|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-sutliff|""|2wd sport utility vehicles&4-door mid-size passenger car&4wd sport utility vehicles&buick&chevrolet&encore&flex&ford&gmlslp-buick&gmps-faulkner&gmps-freysinger&gmps-jones-family&gmps-sutliff&gm-t1-buick&gm-t1-chevrolet|desktop|2457188|1|0|0|0|937|0
-599|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-stingray|""|summary|desktop|2457188|1|0|0|0|11063|0
-4598|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-jeff-gordon|""|summary|desktop|2457188|1|0|0|0|18571|0
-4462|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-gateway|""|summary|desktop|2457188|2|0|0|0|447|0
-38|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-bergeyschev|""|summary|desktop|2457188|2|0|0|0|34629|0
-257|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-gateway|""|summary|desktop|2457188|2|0|0|0|447|0
-154|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-dan-cummins|""|2wd standard pickup trucks&4-door compact passenger car&4wd standard pickup trucks&cadillac&chevrolet&cruze&gmc&gmlslp-chevrolet&gmps-dan-cummins&gmps-mwilson&gmps-quantrell&gm-t1-buick&gm-t1-cadillac&gm-t1-chevrolet&gm-t1-gmc|desktop|2457188|1|0|0|0|60474|0
-811|0|1393476903000|flex-lpmodelherofeature|aboutspecials|gmps-criswell|""|2-door compact passenger car&2wd standard pickup trucks&4wd standard pickup trucks&cadillac&camaro&chevrolet&gmc&gmps-burns-rockhill&gmps-campbell&gmps-keller-ny&gm-t1-chevrolet&gm-t1-gmc&impala&new&silverado 1500|desktop|2457188|2|0|0|0|16412|0
-1083|0|1393476903000|flex-lpmodelherofeature|aboutspecials|gmps-northstar|""|summary|desktop|2457188|1|0|0|0|97|0
-155|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-dan-cummins|""|summary|desktop|2457188|1|0|0|0|60474|0
-256|0|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-gateway|""|2wd standard pickup trucks&4wd sport utility vehicles&4wd standard pickup trucks&buick&cadillac&chevrolet&new&silverado 1500 crew cab&srx|desktop|2457188|1|0|0|0|179|0
-4267|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-courtesy-az|""|""|desktop|2457188|5|0|0|0|1189184|45433
-5053|3|1393476903000|flex-lpcorebenefit|aboutspecials|gmps-stingray|""|2wd standard pickup trucks&4wd standard pickup trucks&chevrolet&gmps-stingray&new&silverado 1500|desktop|2457188|1|0|0|0|11063|0
+0|0|bad number|widgetype0|pagelabel0|webid0|widgetcontext0|usersegment0|deviceid0|1452825371008|63|43|73|46|73|7
+1|1|1|widgetype1|pagelabel1|webid1|widgetcontext1|usersegment1|deviceid1|1452825371008|76|47|17|21|10|29
+2|2|2|widgetype2|pagelabel2|webid2|widgetcontext2|usersegment2|deviceid2|1452825371008|83|62|67|73|58|85
+3|3|3|widgetype3|pagelabel3|webid3|widgetcontext3|usersegment3|deviceid3|1452825371008|22|7|91|27|10|0
+4|4|4|widgetype4|pagelabel4|webid4|widgetcontext4|usersegment4|deviceid4|1452825371008|97|61|60|48|36|59
+5|5|5|widgetype5|pagelabel5|webid5|widgetcontext5|usersegment5|deviceid5|1452825371008|41|93|2|80|16|30
+6|6|6|widgetype6|pagelabel6|webid6|widgetcontext6|usersegment6|deviceid6|1452825371008|24|66|73|54|44|98
+7|bad number|7|widgetype7|pagelabel7|webid7|widgetcontext7|usersegment7|deviceid7|1452825371008|86|10|3|37|7|18
+8|8|8|widgetype8|pagelabel8|webid8|widgetcontext8|usersegment8|deviceid8|1452825371008|56|44|12|53|32|55
+9|9|9|widgetype9|pagelabel9|webid9|widgetcontext9|usersegment9|deviceid9|1452825371008|37|96|63|bad number|25|57

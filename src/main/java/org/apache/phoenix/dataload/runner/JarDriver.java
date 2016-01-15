@@ -18,8 +18,8 @@
 
 package org.apache.phoenix.dataload.runner;
 
-import com.cobalt.bi.widget.hbase.mapreduce.PagesSegmentWidgetHBaseLoader;
 import org.apache.hadoop.util.ProgramDriver;
+import org.apache.phoenix.dataload.widget.WidgetPagesStatPhoenixLoader;
 
 /**
  * A description of an example program based on its class and a
@@ -31,8 +31,8 @@ public class JarDriver {
         int exitCode = -1;
         ProgramDriver pgd = new ProgramDriver();
         try {
-            pgd.addClass("pagesSegmentWidgetHBaseLoader", PagesSegmentWidgetHBaseLoader.class,
-                    "A map/reduce program that loads data from hdfs files into pages_segment_widget hbase table");
+            pgd.addClass("widgetPagesStatPhoenixLoader", WidgetPagesStatPhoenixLoader.class,
+                    "A map/reduce program that loads data from hdfs files into widget_pages_stat phoenix table");
 
             exitCode = pgd.run(argv);
         } catch (Throwable e) {

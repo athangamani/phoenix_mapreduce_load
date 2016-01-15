@@ -30,7 +30,8 @@ public class WidgetPagesStatPhoenixLoader {
         @Override
         public void map(LongWritable longWritable, Text text, Context context) throws IOException, InterruptedException {
             Configuration conf = context.getConfiguration();
-            String rundateString = conf.get("rundate");
+            String dataTimestamp = conf.get("dataTimestamp");
+
             WidgetPagesStatLineParser parser = new WidgetPagesStatLineParser();
             try {
                 WidgetPagesStat widgetPagesStat = parser.parse(text.toString());
@@ -55,10 +56,10 @@ public class WidgetPagesStatPhoenixLoader {
 
                     widgetPagesStats.setDeviceType(widgetPagesStat.getDeviceType());
                     widgetPagesStats.setViewCount(widgetPagesStat.getViewCount());
-                    long timestamp = WidgetPagesStatLineParser.parseDateString(rundateString);
-                    //System.out.println("timestamp = " + timestamp);
-                    widgetPagesStats.setViewDateTimestamp(timestamp);
-                    widgetPagesStats.setViewDate(rundateString);
+                    if (dataTimestamp != null){
+                        long timestamp = Long.parseLong(dataTimestamp);
+                        widgetPagesStats.setViewDateTimestamp(timestamp);
+                    }
                     widgetPagesStats.setUserSegments(widgetPagesStat.getUserSegments());
 
                     widgetPagesStats.setDimDateKey(widgetPagesStat.getDimDateKey());
@@ -66,7 +67,6 @@ public class WidgetPagesStatPhoenixLoader {
 
                     widgetPagesStatWritable.setWidgetPagesStat(widgetPagesStats);
                     context.write(NullWritable.get(), widgetPagesStatWritable);
-                    //System.out.println("id = " + id + " count = " + count);
                     count++;
                 }
 
@@ -84,43 +84,25 @@ public class WidgetPagesStatPhoenixLoader {
     public static void main(String[] args) throws Exception {
         final Configuration conf = new Configuration();
 
-        if (args != null && args.length != 4){
-            throw new Exception("Usage : HDFSInputPath zookeeperQuorum-CommaSeperated TableName InputDataTime-Format-yyyyMMdd");
+        if (args != null && args.length != 3){
+            throw new Exception("Usage : HDFSInputPath TableName dataTimestamp");
         }
 
         String inputpath = args[0];
-        String zookeeperQuorum = args[2];
-        String tableName = args[3];
-        String rundateString = args[4];
+        //String zookeeperQuorum = args[1];
+        //String zookeeperPort = args[2];
+        //String hbaseZnodeParent = args[3];
+        String tableName = args[1];
+        String dataTimestamp = args[2];
 
-        conf.set("rundate", rundateString);
-        long timestamp = WidgetPagesStatLineParser.parseDateString(rundateString);
-        conf.set(PhoenixRuntime.CURRENT_SCN_ATTRIB, ""+(timestamp));
-        conf.set(PhoenixConfigurationUtil.CURRENT_SCN_VALUE, "" + timestamp);
+        conf.set("dataTimestamp", dataTimestamp);
+        conf.set(PhoenixRuntime.CURRENT_SCN_ATTRIB, ""+(dataTimestamp));
+        conf.set(PhoenixConfigurationUtil.CURRENT_SCN_VALUE, "" + dataTimestamp);
 
         HBaseConfiguration.addHbaseResources(conf);
-        conf.set("zookeeper.znode.parent", "/hbase-unsecure");
-        conf.set("hbase.zookeeper.property.clientPort", "2181");
-        //String nameNodeService = args[3];
-        //conf.set("fs.defaultFS", "hdfs://" + nameNodeService);
-        conf.set("hbase.zookeeper.quorum", zookeeperQuorum);
-        //conf.set("mapreduce.framework.name", "yarn");
-        conf.set("zookeeper.znode.parent", "/hbase-unsecure");
-
-        //conf.set("yarn.resourcemanager.address", args[5]);
-        //conf.set("yarn.resourcemanager.scheduler.address", args[6]);
-        //conf.set("dfs.nameservices",nameNodeService);
-        //conf.set("dfs.ha.namenodes."+nameNodeService, "namenode1,namenode2");
-        //conf.set("dfs.namenode.rpc-address." +nameNodeService+ ".namenode1", args[7]);
-        //conf.set("dfs.namenode.rpc-address." +nameNodeService+ ".namenode2", args[8]);
-        //conf.set("dfs.client.failover.proxy.provider."+nameNodeService,"org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider");
-        //conf.set("yarn.application.classpath",
-        //        "/usr/hdp/current/hadoop-client/*,/usr/hdp/current/hadoop-client/lib/*," +
-        //                "/usr/hdp/current/hadoop-hdfs-client/*,/usr/hdp/current/hadoop-hdfs-client/lib/*," +
-        //                "/usr/hdp/current/hadoop-yarn-client/*,/usr/hdp/current/hadoop-yarn-client/lib/*," +
-        //                "/usr/hdp/current/hive/lib/*,/usr/hdp/current/hadoop-mapreduce-client/*," +
-        //                "/usr/hdp/current/hadoop-mapreduce-client/lib/*, /usr/hdp/current/phoenix-client/lib/*," +
-        //                "/usr/hdp/2.2.4.2-2/hadoop-mapreduce/*");
+        //conf.set("zookeeper.znode.parent", hbaseZnodeParent);
+        //conf.set("hbase.zookeeper.property.clientPort", zookeeperPort);
+        //conf.set("hbase.zookeeper.quorum", zookeeperQuorum);
 
         Path inputPath = new Path(inputpath);
         createJob(conf, inputPath, tableName);
@@ -132,7 +114,7 @@ public class WidgetPagesStatPhoenixLoader {
         PhoenixMapReduceUtil.setOutput(job, tableName, "WEB_ID,WEB_PAGE_LABEL,DEVICE_TYPE," +
                 "WIDGET_INSTANCE_ID,WIDGET_TYPE,WIDGET_VERSION,WIDGET_CONTEXT," +
                 "TOTAL_CLICKS,TOTAL_CLICK_VIEWS,TOTAL_HOVER_TIME_MS,TOTAL_TIME_ON_PAGE_MS,TOTAL_VIEWABLE_TIME_MS," +
-                "VIEW_COUNT,USER_SEGMENT,DIM_DATE_KEY,VIEW_DATE,VIEW_DATE_TIMESTAMP,ROW_NUMBER");
+                "VIEW_COUNT,USER_SEGMENT,DIM_DATE_KEY,VIEW_DATE_TIMESTAMP,ROW_NUMBER");
         FileInputFormat.setInputPaths(job, inputPath);
         job.setMapperClass(WidgetPhoenixMapper.class);
         job.setMapOutputKeyClass(NullWritable.class);

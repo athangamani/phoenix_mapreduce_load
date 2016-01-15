@@ -8,14 +8,14 @@ import java.sql.*;
 /**
  * Created by thangar
  */
-public class WidgetPhoenixAdminCommands_AT {
+public class WidgetPhoenixAdminCommandsTest {
 
     public static final String TIMESTAMP_FORMAT = "yyyyMMdd";
 
     public static void main(String[] args) throws SQLException {
         DriverManager.registerDriver(PhoenixDriver.INSTANCE);
-        Connection connection = DriverManager.getConnection("jdbc:phoenix:tukpdmdlake03.tuk.cobaltgroup.com:/hbase-unsecure;CurrentSCN=100"); //
-        //Connection connection = DriverManager.getConnection("jdbc:phoenix:master01.preprod.datalake.cdk.com:2181:/hbase-unsecure;CurrentSCN=100"); //
+        //Connection connection = DriverManager.getConnection("jdbc:phoenix:tukpdmdlake03.tuk.cobaltgroup.com:/hbase-unsecure;CurrentSCN=100"); //
+        Connection connection = DriverManager.getConnection("jdbc:phoenix:master01.preprod.datalake.cdk.com:2181:/hbase-unsecure;CurrentSCN=100"); //
         PhoenixConnection phoenixConnection = (PhoenixConnection)connection;
         System.out.println("phoenixConnection.getSCN() = " + phoenixConnection.getSCN());
 
@@ -81,13 +81,13 @@ public class WidgetPhoenixAdminCommands_AT {
                 "  view_count UNSIGNED_LONG,\n" +
                 "\n" +
                 "  dim_date_key UNSIGNED_LONG,\n" +
-                "  view_date VARCHAR,\n" +
                 "  user_segment VARCHAR,\n" +
                 "  CONSTRAINT pk PRIMARY KEY (web_id, web_page_label, device_type, widget_instance_id, widget_type, widget_version, widget_context, view_date_timestamp, row_number)\n" +
                 ")\n" +
                 "SALT_BUCKETS=32,\n" +
-                "COMPRESSION='LZ4'," +
-                "TTL=5184000");
+                "COMPRESSION='LZ4'"
+                //"TTL=5184000"
+        );
         connection.commit();
     }
 
@@ -118,7 +118,6 @@ public class WidgetPhoenixAdminCommands_AT {
             System.out.println("DEVICE_TYPE = " + resultSet.getString("DEVICE_TYPE"));
             System.out.println("VIEW_COUNT = " + resultSet.getString("VIEW_COUNT"));
             System.out.println("VIEW_DATE_TIMESTAMP = " + resultSet.getString("VIEW_DATE_TIMESTAMP"));
-            System.out.println("VIEW_DATE = " + resultSet.getString("VIEW_DATE"));
 
             System.out.println("USER_SEGMENT = " + resultSet.getString("USER_SEGMENT"));
             System.out.println("DIM_DATE_KEY = " + resultSet.getString("DIM_DATE_KEY"));
